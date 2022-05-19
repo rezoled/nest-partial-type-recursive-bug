@@ -1,0 +1,46 @@
+{
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    // same as our --compilerOptions flag and our TS_NODE_COMPILER_OPTIONS environment variable
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "resolveJsonModule": true,
+    "lib": ["es2017", "dom", "esnext.asynciterable"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "paths": {
+      "@rezonapp/browser-safe-schemas": [
+        "libs/schemas/src/entities/enums/index.ts"
+      ],
+      "@rezonapp/common": ["libs/common/src"],
+      "@rezonapp/feature-flags": ["libs/common/feature-flags/index.ts"],
+      "@rezonapp/gql": ["libs/gql/index.ts"],
+      "@rezonapp/gql/api": ["libs/gql/generated/api.ts"],
+      "@rezonapp/icons": ["libs/icons"],
+      "@rezonapp/permissions": ["libs/common/permissions/index.ts"],
+      "@rezonapp/schemas": ["libs/schemas/src/index.ts"],
+      "@rezonapp/sdk*": ["libs/sdks/generated*"],
+      "@rezonapp/ui-components": ["libs/ui-components/src/index.ts"],
+      "@rezonapp/utils": ["libs/utils"],
+      "@rezonapp/openapi": ["libs/openapi/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
